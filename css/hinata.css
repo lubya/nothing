@@ -1,0 +1,39 @@
+.boximage3 {
+    opacity:1;
+}
+
+.boximage3 img {
+    float:left;
+    width:215px;
+    height:500px;
+    object-fit: cover;
+    border:1px solid #00ff88;
+    margin-right:15px;
+}
+.boximage33 {
+    opacity:1;
+    position:relative;
+    width:0px;
+    height:0px;
+}
+
+.boximage33 img {
+    margin-top:1px;
+    width:415px;
+    height:120px;
+    object-fit: cover;
+    border-right:15px solid transparent;
+    border:1px solid #ae9582;
+}
+
+#box3 h2 {
+    font-family:montserrat;
+    font-size:11px;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    letter-spacing:5px;
+    font-weight:bold;
+    color:#ff0077;
+}
