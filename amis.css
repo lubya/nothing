@@ -1,0 +1,62 @@
+/*------------------------------------------------------ titre (pour amis) */
+#maintitle2 {
+    position:fixed;
+    margin:0 auto;
+    left:0;right:0;
+    top:60%;     /* distance depuis le "top"/"bottom" (à changer en fonction de ce que je veux) */
+    width:600px; /* taille du titre */
+    padding:25px;
+    height:auto;
+    background-color:transparent;
+    font-family:montserrat;
+    text-transform:uppercase;
+    color:#aaa;
+    font-size:20px;
+    letter-spacing:5px;
+    line-height:1;
+    text-align:center;
+    z-index:1000;
+}
+/*------------------------------------------------ ronds des amis (pp Amis) */
+#image2 {
+    position:fixed;
+    margin:0 auto;
+    left:0px;right:0px;
+    top:68%;
+    width:100%;
+    text-align:center;
+    white-space:nowrap;
+    height:auto;
+    animation-delay: 2s;
+}
+
+#image2 img {
+    margin-left:15px;  /* distance entre les images (rond) */
+    margin-right:15px; /* distance entre les images (rond) */
+    margin-bottom:45px;
+    width:120px;
+    height:auto;
+    cursor:pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    border-radius: 50%;
+
+}
+
+#image2:hover img {
+    opacity:0.8;              /* fade/opacity amount of other images when ONE image is hovered */
+    
+    -webkit-filter:blur(8px); /* blur amount on other images when ONE image is hovered */
+    -moz-filter:blur(8px);    /* <--- all numbers : the same */
+    -o-filter:blur(8px);
+    filter:blur(8px);
+}
+
+#image2:hover img:hover {
+    opacity:1;
+    -webkit-filter:blur(0px);
+    -moz-filter:blur(0px);
+    -o-filter:blur(0px);
+    filter:blur(0px);
+}

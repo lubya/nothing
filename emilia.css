@@ -1,0 +1,71 @@
+.boximage2 {
+    opacity:1;
+}
+
+.boximage2 img {
+    float:left;
+    width:215px;
+    height:400px;
+    object-fit: cover;
+    border:1px solid #666666;
+    margin-right:15px;
+}
+.boximage22 {
+    opacity:1;
+    position:relative;
+    width:0px;
+    height:0px;
+}
+
+.boximage22 img {
+    margin-top:1px;
+    width:215px;
+    height:120px;
+    object-fit: cover;
+    border-right:15px solid transparent;
+    border:1px solid #666666;
+}
+
+/*---------------------------------------------------barre stats--*/
+.statbar1 {
+    margin-left:6px;
+    height:8px;
+    width:100px;
+    background-color:#e6e1f8;
+    overflow:hidden;
+    border-radius:4px;
+    display:inline-block;
+}
+
+.statfill1 {
+    height:100%;
+    width:0%;
+    background-color:#d5cdf4;
+    border-radius:4px 0px 0px 4px;
+}
+
+/* -------------------------------------------------couleurs fiche d'infos*/
+/* ---------------------------------------------- titre principal*/
+#box2 h1 {
+    color:#c6516b;
+}
+/* ------------------------------------------------- sous-titres */
+#box2 h2 {
+    font-family:montserrat;
+    font-size:13px;
+    text-transform:uppercase;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    letter-spacing:5px;
+    font-weight:bold;
+    color:#7ec9d8;
+}
+
+#box2 h2::first-letter {
+    color:#7ee1f5;
+}
+
+#box2 b {
+    color:#82cf58;
+}

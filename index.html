@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Belumia RP</title>
+ 
+<link rel="shortcut icon" href="{inserer favicon}">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+ 
+<!--informations en survolant avec la souris (personnage principal, ...)-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($) {
+  $(document).ready(function() {
+    $("a[title]").style_my_tooltips( {
+      tip_follows_cursor:true,
+      tip_delay_time:10,
+      tip_fade_speed:10,
+      attribute:"title"
+    });
+  });
+})
+(jQuery);
+</script>
+
+<!--fenetre (stats, bio)-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('a.poplight[href^=#]').click(function () {
+      var popID = $(this).attr('rel'); //Get Popup Name
+      var popURL = $(this).attr('href'); //Get Popup href to define size
+      var query = popURL.split('?');
+      var dim = query[1].split('&');
+      var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+      $('#' + popID).fadeIn().css({
+        'width': Number(popWidth)
+      })
+        .prepend('<a href="#" class="close"></a>');
+      var popMargTop = ($('#' + popID).height() + 80) / 2;
+      var popMargLeft = ($('#' + popID).width() + 80) / 2;
+      //Apply Margin to Popup
+      $('body').append('<div id="fade"></div>');
+      $('#fade').css({
+        'filter': 'alpha(opacity=80)'
+      })
+        .fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+      return false;
+    });
+    $('a.close, .closewin').live('click', function () {
+      $('#fade, .popup_block').fadeOut(function () {
+        $('a.close').remove(); //fade them both out
+      });
+      return false;
+    });
+  });
+</script>
+
+<!--liens/css-->
+<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/belumia.css">
+<link rel="stylesheet" type="text/css" href="css/emilia.css">
+<link rel="stylesheet" type="text/css" href="css/hinata.css">
+<link rel="stylesheet" type="text/css" href="css/amis.css">
+</head>
+
+
+
+<body>
+<!--titre-->
+<div id="maintitle" class="box fade-in one"> <!--fade-in numéro : va apparaître en fondu sur la page en troisième-->
+Mes personnages
+</div>
+
+<div id="maintitle2" class="box fade-in one">
+  Mes amis
+</div>
+
+<!-- ---------------------A REMETTRE PLUS TARD MAYBE ?
+<div id="botbar">
+  <div id="botmid" class="box fade-in two">
+      <div class="bottext">2021 - Made by Belumia (LUBIYARA)</div>
+  </div>
+</div>
+-->
+
+
+<div id="image1" class="box fade-in three">
+<!--les bulles des personnages-->
+<!--href: "475" affiche la fiche d'infos en taille 475 / title: infos en survolant avec la souris / rel: box1 fiche d'infos propre au perso-->
+<a href="#?w=475" title="personnage principal" rel="box1" class="poplight"><img src="https://pbs.twimg.com/media/DWW3GBfW0AAW2gg.jpg" style="width:160px; border:0px solid black"></a>
+<br>
+<a href="#?w=475" title="deuxième personnage" rel="box2" class="poplight"><img src="https://64.media.tumblr.com/43a8ea13e32f9a557dee961d89ee2a6a/tumblr_osd0zaLQKR1rcuvl9o8_250.png" style="width:120px; border:0px solid black"></a>
+<a href="#?w=475" title="troisième personnage" rel="box3" class="poplight"><img src="https://s11.favim.com/orig/7/761/7616/76160/zorro-de-las-nueve-colas-pretty-fanart-Favim.com-7616054.jpg" style="width:120px; border:0px solid black"></a>
+
+
+<div id="image2" class="box fade-in three">
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+<a href="#?w=475" title="Alexis THE nulos" rel="box4" class="poplight"><img src="https://cdn.discordapp.com/avatars/152826694376488960/56eb3a02c6a5493a8750096bf1522018.png?size=2048&width=676&height=676" style="width:80px; border:0px solid black"></a>
+</div></div>
+
+
+<!-----------------------------------------------------------------------------------------------------------------1ER PERSONNAGE-->
+<div id="box1" class="popup_block">
+<a title="retour vers les personnages"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+<!--titre-->
+<h1>B E L U M I A</h1>
+
+<!--les images-->
+<div class="boximage1"><img src="https://i.pinimg.com/564x/7c/4f/77/7c4f77f11125f6590b7cc32e9336aa7a.jpg"></div>
+<div class="boximage11"><img src="https://i.pinimg.com/736x/9a/e5/2e/9ae52ea14c15e43d65f4bf38363d647c.jpg"></div>
+
+
+<!--1er titre-->
+<h2>informations</h2>
+
+<span class="lnr lnr-pencil"></span>
+<b>Nom:</b> Belumia
+<p>
+
+<span class="lnr lnr-user"></span>
+<b>Age:</b> 20 ans
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Anniversaire:</b> 8 mai
+<p>
+
+
+<!--2e titre-->
+<h2>statistiques</h2>
+
+<!--stats-->
+<table><tbody>
+    <!--stat 1-->
+    ★ A S S A S S I N  ‎ D E U S
+    <br>
+    <br>
+
+  <tr>
+    <!-----stat 2----->
+   <td><stat>intelligence</stat></td>
+    <!-----stat bar----->
+    <td>
+      <div class="statbar">
+        <div class="statfill" style="width:45%"></div>
+      </div>
+    </td>
+ </tr>
+
+  <tr>
+    <!-----stat 3----->
+    <td><stat>force</stat></td>
+    <!-----stat bar----->
+    <td>
+      <div class="statbar">
+        <div class="statfill" style="width:60%"></div>
+      </div>
+    </td>
+  </tr>
+
+    <tr>
+    <!-----stat 4----->
+    <td><stat>discretion</stat></td>
+    <!-----stat bar----->
+    <td>
+      <div class="statbar">
+       <div class="statfill" style="width:97%"></div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <!-----stat 5----->
+    <td><stat>rapidité</stat></td>
+    <!-----stat bar----->
+    <td>
+      <div class="statbar">
+        <div class="statfill" style="width:51%"></div>
+      </div>
+    </td>
+  </tr>
+
+</tbody></table>
+
+
+<!--3e titre-->
+<h2>about</h2>
+
+<div class="content">
+  Yuno est une collégienne de la ville. Elle est sympa avec tout ses amis. 
+  En vérité, elle n'a pas vraiment d'amis dans son collège. 
+  Elle connait un garçon qu'elle adore beaucoup mais qui n'est pas au collège. 
+  Il avait dit qu'il allait venir au collège pour elle, et elle attend impatiemment depuis ce jour.
+
+</div>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------2E PERSONNAGE----->
+<div id="box2" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+
+<h1>L U B I Y A</h1>
+
+
+<div class="boximage2"><img src="https://data.whicdn.com/images/305889010/original.jpg"></div>
+<div class="boximage22"><img src="https://pa1.narvii.com/6568/989cee09da897fcd445bf824ae54a69698be1ec1_hq.gif"></div>
+
+
+<h2>informations</h2>
+
+<span class="lnr lnr-pencil"></span>
+<b>Nom:</b> Lubiya
+<p>
+
+<span class="lnr lnr-user"></span>
+<b>Age:</b> 20 ans
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Anniversaire:</b> 8 mai
+<p>
+
+
+<h2>statistiques</h2>
+
+
+<table><tbody>
+      
+        
+       ★ A S S A S S I N  ‎ D E U S<br><br>
+        
+        
+     
+      
+      <tr>
+       
+        <td><stat>intelligence</stat></td>
+        
+        <td>
+        <div class="statbar1">
+        
+        <div class="statfill1" style="width:45%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        
+        <td><stat>force</stat></td>
+        
+        <td>
+        <div class="statbar1">
+        
+        <div class="statfill1" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        
+        <td><stat>discretion</stat></td>
+        
+        <td>
+        <div class="statbar1">
+        
+        <div class="statfill1" style="width:97%"></div></div>
+        </td>
+      </tr>
+
+ <tr>
+        
+        <td><stat>rapidité</stat></td>
+        
+        <td>
+        <div class="statbar1">
+        
+        <div class="statfill1" style="width:51%"></div></div>
+        </td>
+      </tr>
+      
+</tbody></table>
+<br>
+
+<h2>about</h2>
+
+<div class="content">
+Your biography text goes here.
+</div>
+</div>
+
+
+<!----------------------------------------------------------------------------------------3EME PERSONNAGE--->
+<div id="box3" class="popup_block">
+
+<a title="back to characters"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+
+
+<h1>BELUMIA</h1>
+
+
+<div class="boximage3"><img src="https://i.gifer.com/fetch/w300-preview/eb/eb4635afb20500d48d5cc4b4024530f9.gif"></div>
+
+
+<h2>informations</h2>
+
+<span class="lnr lnr-pencil"></span>
+<b>Nom:</b> Belumia
+<p>
+
+<span class="lnr lnr-user"></span>
+<b>Age:</b> 20 ans
+<p>
+
+<span class="lnr lnr-calendar-full"></span>
+<b>Anniversaire:</b> 8 mai
+<p>
+
+
+<h2>statistiques</h2>
+
+
+<table><tbody>
+      
+        
+       ★ A S S A S S I N  ‎ D E U S<br><br>
+        
+        
+     
+      
+      <tr>
+        
+        <td><stat>intelligence</stat></td>
+        
+        <td>
+        <div class="statbar">
+       
+        <div class="statfill" style="width:45%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        
+        <td><stat>force</stat></td>
+        
+        <td>
+        <div class="statbar">
+        
+        <div class="statfill" style="width:60%"></div></div>
+        </td>
+      </tr>
+      
+      <tr>
+        
+        <td><stat>discretion</stat></td>
+        
+        <td>
+        <div class="statbar">
+        
+        <div class="statfill" style="width:97%"></div></div>
+        </td>
+      </tr>
+
+ <tr>
+        
+        <td><stat>rapidité</stat></td>
+        
+        <td>
+        <div class="statbar">
+        
+        <div class="statfill" style="width:51%"></div></div>
+        </td>
+      </tr>
+      
+</tbody></table>
+<br>
+
+<h2>about</h2>
+
+<div class="content">
+Your biography text goes here.
+</div>
+</div>
+
+<!-----------------------------------------------------------------------------------------------------------------AMIS : 4EME PERSONNAGE-->
+<div id="box4" class="popup_block">
+  <a title="retour vers les personnages"><div class="closewin"><span class="lnr lnr-cross"></span></div></a>
+  
+  <!--titre-->
+  <h1>B E L U M I A</h1>
+  
+  <!--les images-->
+  <div class="boximage1"><img src="https://i.pinimg.com/564x/7c/4f/77/7c4f77f11125f6590b7cc32e9336aa7a.jpg"></div>
+  <div class="boximage11"><img src="https://i.pinimg.com/736x/9a/e5/2e/9ae52ea14c15e43d65f4bf38363d647c.jpg"></div>
+  
+  
+  <!--1er titre-->
+  <h2>informations</h2>
+  
+  <span class="lnr lnr-pencil"></span>
+  <b>Nom:</b> Belumia
+  <p>
+  
+  <span class="lnr lnr-user"></span>
+  <b>Age:</b> 20 ans
+  <p>
+  
+  <span class="lnr lnr-calendar-full"></span>
+  <b>Anniversaire:</b> 8 mai
+  <p>
+  
+  
+  <!--2e titre-->
+  <h2>statistiques</h2>
+  
+  <!--stats-->
+  <table><tbody>
+      <!--stat 1-->
+      ★ A S S A S S I N  ‎ D E U S
+      <br>
+      <br>
+  
+    <tr>
+      <!-----stat 2----->
+     <td><stat>intelligence</stat></td>
+      <!-----stat bar----->
+      <td>
+        <div class="statbar">
+          <div class="statfill" style="width:45%"></div>
+        </div>
+      </td>
+   </tr>
+  
+    <tr>
+      <!-----stat 3----->
+      <td><stat>force</stat></td>
+      <!-----stat bar----->
+      <td>
+        <div class="statbar">
+          <div class="statfill" style="width:60%"></div>
+        </div>
+      </td>
+    </tr>
+  
+      <tr>
+      <!-----stat 4----->
+      <td><stat>discretion</stat></td>
+      <!-----stat bar----->
+      <td>
+        <div class="statbar">
+         <div class="statfill" style="width:97%"></div>
+        </div>
+      </td>
+    </tr>
+  
+    <tr>
+      <!-----stat 5----->
+      <td><stat>rapidité</stat></td>
+      <!-----stat bar----->
+      <td>
+        <div class="statbar">
+          <div class="statfill" style="width:51%"></div>
+        </div>
+      </td>
+    </tr>
+  
+  </tbody></table>
+  <br>
+  
+  
+  <!--3e titre-->
+  <h2>about</h2>
+  
+  <div class="content">
+  Your biography text goes here.<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa<br>aa
+  </div>
+  </div>
+
+<!-----liens a gauche----->
+<!-----title : souris survolant le bouton affiche un titre----->
+<div id="customlinks" class="box fade-in two">
+    <a href="/" title="home"><span class="lnr lnr-power-switch"></span></a>
+    <a href="/" title="contact"><span class="lnr lnr-phone"></span></a>
+    <a href="/" title="archive"><span class="lnr lnr-map"></span></a>
+    <a href="/" title="sample link"><span class="lnr lnr-link"></span></a>
+    <a href="/" title="sample link"><span class="lnr lnr-list"></span></a>
+    <a href="/" title="sample link"><span class="lnr lnr-star"></span></a>
+</div>
+</body>
+ 
+</div>
+</html>
